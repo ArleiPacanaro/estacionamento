@@ -102,7 +102,7 @@
 <h4><strong>Instalação Maven</strong></h4>
 <p></p>
 <p>O Maven é uma ferramenta OPEN Source da Apache Software Foundation e pode ser baixado pelo site: http://maven.apache.org/download.html, seguindo os seguintes passos: </p>
-<p>* Escolher a ultima versão de acordo com o seu sistema operacional</p>
+<p>* Escolher a ultima versão de acordo com o seu sistema operacional</p>git remote remove origin
 <p>* Fazer o download do arquivo .zip</p>
 <p>* Escolher um diretório para descompacta-lo</p>
 <p>* Adicionar uma variável de ambiente: M2_HOME apontando para o diretório que descompactou o arquivo até chegar no diretório /bin</p>
