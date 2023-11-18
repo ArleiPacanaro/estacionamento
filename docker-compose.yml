@@ -12,7 +12,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: root
 
   web:
-    image: tech:3.0
+    image: arleilepiani/tech:3.0
     depends_on:
       - mongo
     ports:
