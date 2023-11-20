@@ -21,18 +21,45 @@
 
 <h2><strong>Funcionalidades e Demonstração da Aplicação - 2º Item do Entregável</strong></h2>
 <p></p>
-<p> 1) Baixar via GIT : git clone https://github.com/IgorPROliveira/tech_03.git</p> 
+<p> 1) Baixar via GIT : git clone https://github.com/ArleiPacanaro/estacionamento.git</p> 
 <p></p>
-<p> 2) Executar em máquina local : na linha de comando ir até a pasta que clonou o projeto e no prompt da linha de comando, executar: 
-<p><b> 2.1)ir até a pasta: TechChallenge e  executar o comando: docker build -t tech:3.0 . </b> </p> 
-<p><b> 2.2)ir até a pasta: TechChallenge e  executar o comando: docker compose up -d </b> </p> 
-<p> hub ja deixar a imagem pronta, porém por não ser requisito e ainda não termos esta conta cadastrada, iremos criar uma imagem localmente. Mas este passo já começa a nos preparar para implantarmos nosso projeto em algum serviço de Cloud e até mesmo usar recursos cloud native como: API Gateway. Load balancer, serviçois Serverless e todas as demais vantagens de um sistema em Nuvem.</p>
-<p><b>Premissa: Docker instalado na máquina client e AWS CLI</b></p> 
+<p> 2) Disponibilizamos 3 formas de execução:
+	<pre>
+	<b>2.1 Cloud : </b>
+	Via cloud para evitarmos cobranças e para avaliarmos como MVP1, usamos para a aplicação o Render e para o banco de dados o Atlas MongoDB (Permite adiconar cluster, fazer backups e etc) , seguimos os seguintes passos:
+ 	Geramos o .jar da aplicação: no diretório do projeto: mvn install -U
+  	Geramos a imagem com o docker da raiz: docker build -t arleilepiani/tech:3.0 .
+   	Conectamos no docker hub central (após cadastro de conta), criamos o respositório tech como publico
+    	Conectamos no docker hub central via linha de comando da maquina local com o projeto: docker login 
+        Vinculamos "tagueamos"  docker tag arleilepiani/tech:3.0 arleilepiani/tech:3.0
+	Subimos a imagem no docker hub : docker push arleilepiani/tech:3.0
+ 	Após isto e criar uma conta no Render, optamos pela Free e existem 2 formas de deploys para Web Services, via Git ou ou repostporio de imagens como o dcker hub que foi o que seguimos.
+  	Usamos basicamente as configruações default , até pela questão de custos, mas temos opções de ajustar o dominio da aplicação e mais alguns detalhes, apontando no caso para nossa imagem: docker.io/arleilepiani/tech:4.0
+   	Bom com estes passos a url esta disponivel: nossa aplicação na Web na cloud do Render e nosso banco na cloud da Atlas MongoDB, com isto facilmemnete podemos mudar para qualquer outra cloud , pois temos pouco acomplamento com alguma cloud em especifico e podemos mudar e evoluir nossa API com Gateway , Autenticação, Balance Loaders e etc, conforme for auymentando a demanda de requisições.
+
+    	url: https://estacionamentoarlei.onrender.com/swagger-ui/index.html
+
+     	Com as ferramentas de cloud que aplicamos, podemos acompanhar as métricas de aplicações e de banco de dados e avaiar a necessidade de escalabilidade, em termos de banco o objetivo e não tirar na Atlas mas na aplicação podemos implementar por exemplo na AWS , usando os reccursos Serverless do FARGATE que faz esta escalabilidade automática da aplicação e no banco de dados podemos ir adicionando clusters e criando indices conforme a necessidade.
+
+ 	
+	<b>2.2 Local pelo Intellij ou IDE de sua preferencia com um mongoDB Local:</b>
+ 	Após a execução do item 1 que é clonar a aplicação do GIT, importar ou abrir o projeto na sua Ide de preferencia e executar o projeto, alterando ao aplication.properties para para a 1 conexão e comentando as demais. Neste caso não precisa do Docker Cliente Instalado.
+  
+	<b>2.3 Docker-Compose:</b>
+	Executar em máquina local : na linha de comando ir até a pasta que clonou o projeto e no prompt da linha de comando, executar: 
+        ir até a pasta: TechChallenge e  executar o comando: docker build -t tech:3.0 .  
+        ir até a pasta: TechChallenge e  executar o comando: docker compose up -d  
+	Neste ponto usar a 2 conexão do aplication properties.
+
+ Tanto pelo sua Ide de preferencia, quanto pelo docker compose, poderá acessar o swagger pela url: 
+
+ http://localhost:8080/swagger-ui/index.html
+
+</pre>
+<p><b>Premissa para execução via docker: Docker instalado na máquina client</b></p> 
 <p></p>
 <p>Em nossa aplicação temos todas as Collections na pasta raiz para poderem realizar os testes.</p>
-<p></p>
-<p>Para acessar o swagger basta ir no browser no endereço: http://localhost:8080/swagger-ui/index.html</p>
-<p></p>
+
 <h2><strong>Tecnologias Utilizadas</strong></h2>
 
 <p></p>
