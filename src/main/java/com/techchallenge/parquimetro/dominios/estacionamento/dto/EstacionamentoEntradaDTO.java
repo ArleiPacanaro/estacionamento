@@ -19,7 +19,6 @@ public class EstacionamentoEntradaDTO {
     @FutureOrPresent(message="Data não poder menor que agora!")
     private LocalDateTime saida;
     private PeriodoEstacionamento periodoEstacionamento;
-    @CPF(message="cpf deve ser válido")
     private String condutorCPF;
     private String veiculoPlaca;
 
