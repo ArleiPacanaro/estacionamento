@@ -49,6 +49,7 @@
 	Executar em máquina local : na linha de comando ir até a pasta que clonou o projeto e no prompt da linha de comando, executar: 
         ir até a pasta: TechChallenge e  executar o comando: docker build -t tech:3.0 .  
         ir até a pasta: TechChallenge e  executar o comando: docker compose up -d  
+	Neste ponto usar a 2 coneção do aplication properties.
 
  Tanto pelo sua ide de preferencia, quanto pelo docker compose, poderá acessar o swagger pela url: 
 
