@@ -42,16 +42,16 @@
      	Com as ferramentas de cloud que aplicamos, podemos acompanhar as métricas de aplicações e de banco de dados e avaiar a necessidade de escalabilidade, em termos de banco o objetivo e não tirar na Atlas mas na aplicação podemos implementar por exemplo na AWS , usando os reccursos Serverless do FARGATE que faz esta escalabilidade automática da aplicação e no banco de dados podemos ir adicionando clusters e criando indices conforme a necessidade.
 
  	
-	<b>Local pelo Intellij ou IDE de sua preferencia com um mongoDB Local:</b>
- 	Após a execução do item 1 que é clonar a aplicação do GIT, importar ou abrir o projeto na sua ide de preferencia e executar o projeto, alterando ao aplication.properties para para a 1 conexão e comentando as demais. Neste caso não precia do Docker Cliente Instalado.
+	<b>2.2 Local pelo Intellij ou IDE de sua preferencia com um mongoDB Local:</b>
+ 	Após a execução do item 1 que é clonar a aplicação do GIT, importar ou abrir o projeto na sua Ide de preferencia e executar o projeto, alterando ao aplication.properties para para a 1 conexão e comentando as demais. Neste caso não precisa do Docker Cliente Instalado.
   
-	<b>Docker-Compose:</b>
+	<b>2.3 Docker-Compose:</b>
 	Executar em máquina local : na linha de comando ir até a pasta que clonou o projeto e no prompt da linha de comando, executar: 
         ir até a pasta: TechChallenge e  executar o comando: docker build -t tech:3.0 .  
         ir até a pasta: TechChallenge e  executar o comando: docker compose up -d  
-	Neste ponto usar a 2 coneção do aplication properties.
+	Neste ponto usar a 2 conexão do aplication properties.
 
- Tanto pelo sua ide de preferencia, quanto pelo docker compose, poderá acessar o swagger pela url: 
+ Tanto pelo sua Ide de preferencia, quanto pelo docker compose, poderá acessar o swagger pela url: 
 
  http://localhost:8080/swagger-ui/index.html
 
