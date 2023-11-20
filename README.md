@@ -26,7 +26,7 @@
 <p> 2) Executar em máquina local : na linha de comando ir até a pasta que clonou o projeto e no prompt da linha de comando, executar: 
 <p><b> 2.1)ir até a pasta: TechChallenge e  executar o comando: docker build -t tech:3.0 . </b> </p> 
 <p><b> 2.2)ir até a pasta: TechChallenge e  executar o comando: docker compose up -d </b> </p> 
-<p> Poderiamos através de uma conta docker hub ja deixar a imagem pronta, porém por não ser requisito e ainda não termos esta conta cadastrada, iremos criar uma imagem localmente. Mas este passo já começa a nos preparar para implantarmos nosso projeto em algum serviço de Cloud e até mesmo usar recursos cloud native como: API Gateway. Load balancer, serviçois Serverless e todas as demais vantagens de um sistema em Nuvem.</p>
+<p> hub ja deixar a imagem pronta, porém por não ser requisito e ainda não termos esta conta cadastrada, iremos criar uma imagem localmente. Mas este passo já começa a nos preparar para implantarmos nosso projeto em algum serviço de Cloud e até mesmo usar recursos cloud native como: API Gateway. Load balancer, serviçois Serverless e todas as demais vantagens de um sistema em Nuvem.</p>
 <p><b>Premissa: Docker instalado na máquina client e AWS CLI</b></p> 
 <p></p>
 <p>Em nossa aplicação temos todas as Collections na pasta raiz para poderem realizar os testes.</p>
